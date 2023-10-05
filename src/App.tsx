@@ -36,7 +36,7 @@ const App = () => {
     >
       <h1
         style={{
-          fontSize: 80,
+          fontSize: 60,
           margin: 20,
         }}
       >
