@@ -2,7 +2,7 @@ import { useState } from "react";
 import DoubleCounter from "./components/DoubleCounter";
 
 const App = () => {
-  const [data, setData] = useState([1, 10, 23, 42]);
+  const [data, setData] = useState<number[]>([1, 10, 23, 42]);
 
   const $x = 1;
   const $y = 2;

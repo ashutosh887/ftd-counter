@@ -1,3 +1,5 @@
+import React from "react";
+
 type Props = {
   addAction: () => void;
   subtractAction: () => void;
@@ -5,7 +7,7 @@ type Props = {
   value: number;
 };
 
-const DoubleCounter = ({
+const DoubleCounter: React.FunctionComponent<Props> = ({
   value,
   addAction,
   subtractAction,
