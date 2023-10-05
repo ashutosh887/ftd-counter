@@ -71,7 +71,6 @@ const App = () => {
           value={data[$x]}
           addAction={() => handleAdd($x)}
           subtractAction={() => handleSubtract($x)}
-          removeAction={() => handleRemove($x)}
         />
 
         <span>{`$y: ${data[$y]}`}</span>
@@ -80,7 +79,6 @@ const App = () => {
           value={data[$y]}
           addAction={() => handleAdd($y)}
           subtractAction={() => handleSubtract($y)}
-          removeAction={() => handleRemove($y)}
         />
 
         <span style={{ margin: 10, textDecoration: "underline" }}>

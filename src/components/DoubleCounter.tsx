@@ -3,7 +3,7 @@ import React from "react";
 type Props = {
   addAction: () => void;
   subtractAction: () => void;
-  removeAction: () => void;
+  removeAction?: () => void;
   value: number;
 };
 
@@ -30,7 +30,8 @@ const DoubleCounter: React.FunctionComponent<Props> = ({
       <span>{value}</span>
       <span>{value * 2}</span>
       <button onClick={addAction}> + </button>
-      <button onClick={removeAction}> delete </button>
+
+      {removeAction && <button onClick={removeAction}> delete </button>}
     </div>
   );
 };
