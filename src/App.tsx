@@ -4,6 +4,9 @@ import DoubleCounter from "./components/DoubleCounter";
 const App = () => {
   const [data, setData] = useState([1, 10, 23, 42]);
 
+  const $x = 1;
+  const $y = 2;
+
   const handleAdd = (index: number) => {
     const newData = [...data];
     newData[index] += 1;
@@ -34,7 +37,7 @@ const App = () => {
       <h1
         style={{
           fontSize: 80,
-          margin: 40,
+          margin: 20,
         }}
       >
         Fastn Demo
@@ -50,6 +53,38 @@ const App = () => {
           removeAction={() => handleRemove(index)}
         />
       ))}
+
+      <div
+        style={{
+          margin: 20,
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          flexDirection: "column",
+        }}
+      >
+        <h4 style={{ margin: 10 }}>Some other Counters: </h4>
+
+        <span>{`$x: ${data[$x]}`}</span>
+
+        <DoubleCounter
+          value={data[$x]}
+          addAction={() => handleAdd($x)}
+          subtractAction={() => handleSubtract($x)}
+          removeAction={() => handleRemove($x)}
+        />
+
+        <span>{`$y: ${data[$y]}`}</span>
+
+        <DoubleCounter
+          value={data[$y]}
+          addAction={() => handleAdd($y)}
+          subtractAction={() => handleSubtract($y)}
+          removeAction={() => handleRemove($y)}
+        />
+
+        <span>SUM: {data[$x] + data[$y]}</span>
+      </div>
     </div>
   );
 };
