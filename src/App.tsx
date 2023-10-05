@@ -83,7 +83,9 @@ const App = () => {
           removeAction={() => handleRemove($y)}
         />
 
-        <span>SUM: {data[$x] + data[$y]}</span>
+        <span style={{ margin: 10, textDecoration: "underline" }}>
+          SUM: {data[$x] + data[$y]}
+        </span>
       </div>
     </div>
   );
